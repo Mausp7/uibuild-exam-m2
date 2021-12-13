@@ -129,6 +129,12 @@ body {
 
 				margin: 0px 15px 0px 0px;
 				background-color: #fff;
+
+				&.checked {
+					background-image: url(./pic/tick.png);
+					background-position: center;
+					background-size: contain;
+				}
 			}
 
 			label[for] {

@@ -136,6 +136,12 @@ body {
   background-color: #fff;
 }
 
+#root form div.container input[type="checkbox"].checked {
+  background-image: url(./pic/tick.png);
+  background-position: center;
+  background-size: contain;
+}
+
 #root form div.container label[for] {
   font-family: "Montserrat", sans-serif;
   font-size: 16px;
