@@ -1,27 +1,32 @@
+$primary-color: #467745;
+$background-color: #f7e4d4;
+
 body,
 body *,
 body *::before,
 body *::after {
-	box-sizing:border-box;
-	margin:0;
-	padding:0;
-	border:0;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	border: 0;
 
-	background:transparent;
+	background: transparent;
 
-	font-family:inherit;
-	text-decoration:none;
-	outline:none;
+	font-family: inherit;
+	text-decoration: none;
+	outline: none;
 }
 
-ol, ul, li {
-	display:block;
+ol,
+ul,
+li {
+	display: block;
 
-	list-style:none;
+	list-style: none;
 }
 
 table {
-	border-spacing:0;
+	border-spacing: 0;
 	border-collapse: collapse;
 }
 
@@ -29,7 +34,8 @@ a img {
 	border: none;
 }
 
-button, a {
+button,
+a {
 	cursor: pointer;
 
 	color: inherit;
@@ -39,9 +45,146 @@ textarea {
 	resize: none;
 }
 
-button, input, textarea, select {
+button,
+input,
+textarea,
+select {
 	appearance: none !important;
 	-webkit-appearance: none !important;
-	
+
 	border-radius: 0;
+}
+
+body {
+	position: relative;
+
+	width: 100vw;
+	height: 100vh;
+
+	background-color: $background-color;
+}
+
+#root {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+
+	width: 50%;
+
+	transform: translate(-50%, -50%);
+
+	form {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+		height: 450px;
+
+		h1 {
+			width: 100%;
+
+			font-family: "EB Garamond", serif;
+			font-size: 48px;
+			font-weight: normal;
+			text-align: center;
+			color: $primary-color;
+		}
+
+		input[type="text"] {
+			width: 100%;
+			max-width: 480px;
+			height: 64px;
+
+			padding: 20px;
+			background-color: #fff;
+
+			font-family: "Montserrat", sans-serif;
+			font-size: 16px;
+			font-weight: 500;
+			color: $primary-color;
+		}
+
+		textarea {
+			width: 100%;
+			max-width: 480px;
+			height: 120px;
+
+			padding: 20px;
+			background-color: #fff;
+
+			font-family: "Montserrat", sans-serif;
+			font-size: 16px;
+			font-weight: 500;
+			color: $primary-color;
+		}
+		div.container {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+
+			input[type="checkbox"] {
+				width: 20px;
+				min-width: 20px;
+				height: 20px;
+
+				margin: 0px 15px 0px 0px;
+				background-color: #fff;
+			}
+
+			label[for] {
+				font-family: "Montserrat", sans-serif;
+				font-size: 16px;
+				font-weight: 500;
+				color: $primary-color;
+
+				a {
+					text-decoration: underline;
+				}
+			}
+		}
+		button {
+			width: 70%;
+			max-width: 280px;
+			height: 80px;
+
+			border-radius: 40px;
+			background-color: $primary-color;
+
+			font-family: "EB Garamond", serif;
+			font-size: 21px;
+			font-weight: 500;
+			text-align: center;
+			text-transform: uppercase;
+			letter-spacing: 0.2em;
+			color: $background-color;
+		}
+	}
+}
+
+@media screen and (max-width: 520px) {
+	#root {
+		width: 100%;
+
+		form {
+			h1 {
+				padding: 0px 20px;
+
+				font-size: 36px;
+				text-align: left;
+			}
+
+			input[type="text"] {
+				width: calc(100% - 40px);
+			}
+
+			textarea {
+				width: calc(100% - 40px);
+			}
+			div.container {
+				padding: 0px 20px;
+			}
+			button {
+			}
+		}
+	}
 }

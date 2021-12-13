@@ -1,16 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Document</title>
-    
-	<link rel="stylesheet" href="./style.css">
-    <script src="./script.js"></script>
-</head>
-<body>
-    <div id="root"></div>
-</body>
+		<title>Document</title>
+
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700;800&family=Montserrat:wght@300;400;500;600;700;800&display=swap"
+			rel="stylesheet"
+		/>
+
+		<link rel="stylesheet" href="./style.css" />
+		<script src="./script.js"></script>
+	</head>
+	<body>
+		<div id="root">
+			<form action="">
+				<h1>Visszajelzés</h1>
+				<input type="text" name="subject" placeholder="Tárgy" />
+				<textarea
+					name="comment"
+					cols="30"
+					rows="10"
+					placeholder="Megjegyzés"
+				></textarea>
+				<div class="container">
+					<input type="checkbox" name="privacy-policy" />
+					<label for="privacy-policí"
+						>Elolvastam és elfogadom az
+						<a href="">Adatkezelési Tájékoztatót.</a>
+					</label>
+				</div>
+				<button type="submit">Mentés</button>
+			</form>
+		</div>
+	</body>
 </html>
